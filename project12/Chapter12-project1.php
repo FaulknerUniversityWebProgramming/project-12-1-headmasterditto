@@ -13,7 +13,20 @@
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-<?php include 'header.inc.php'; ?>
+
+<?php include 'header.inc.php'; 
+	$genre = [
+		1 => "Abstract",
+		2 => "Baroque",
+		3 => "Gothic",
+		4 = "Renaissance",
+	];
+	$subject = [
+		1 => "Animals",
+		2 => "Landscape",
+		3 => "People",
+	];
+?>
     
 <main>
 <form class="form"  id="mainForm" method="POST" action="art-process.php">
