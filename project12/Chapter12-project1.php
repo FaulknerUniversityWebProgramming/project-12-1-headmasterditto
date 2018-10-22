@@ -19,7 +19,7 @@
 		1 => "Abstract",
 		2 => "Baroque",
 		3 => "Gothic",
-		4 = "Renaissance",
+		4 => "Renaissance",
 	];
 	$subject = [
 		1 => "Animals",
