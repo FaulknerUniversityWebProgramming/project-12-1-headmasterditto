@@ -15,17 +15,19 @@
 <body>
 
 <?php include 'header.inc.php'; 
-	$genre = [
-		1 => "Abstract",
-		2 => "Baroque",
-		3 => "Gothic",
-		4 => "Renaissance",
-	];
-	$subject = [
-		1 => "Animals",
-		2 => "Landscape",
-		3 => "People",
-	];
+	$genre = array("Abstract", "Baroque", "Gothic","Renaissance");
+	$subject = array("Animal","Landscape","People");
+	
+	function fillGenreList($strarr) {
+		foreach($strarr as &$value) {
+			echo "<option>".$value."</option>";
+		};
+	};
+	function fillSubjectList($strarr) {
+		foreach($strarr as &$value) {
+			echo "<option>".$value."</option>";
+		};
+	};
 ?>
     
 <main>
@@ -43,15 +45,15 @@
        <p class="form__row"> 
            <label>Genre</label><br/>
            <select name="genre" class="form__input form__select">
-              <option>Choose genre</option> 
-              
+				<option>Choose genre</option> 
+				<?php fillGenreList($genre); ?>
            </select>
        </p>
        <p class="form__row"> 
            <label>Subject</label><br/>
            <select name="subject" class="form__input form__select">
-              <option>Choose subject</option> 
-              
+				<option>Choose subject</option> 
+				<?php fillSubjectList($subject); ?>
            </select>
        </p>
        <p class="form__row">	
